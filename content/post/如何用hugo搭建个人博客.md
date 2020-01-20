@@ -92,7 +92,7 @@ hugo server     #预览非草稿
 * 运行如下代码：
 
 ```
-hugo -D
+hugo -D            #hugo也可以
 ```
 
 ### 三、博客上传到GitHub
@@ -118,7 +118,21 @@ git push -u origin master
 * 在cu2xin.github.io处点击Settings；
 * 在弹出网页中的GitHub pages处找到链接点击查看博客。
 
-### 四、博客备份
+### 四、添加第二个博客
+
+运行如下命令添加第二篇博客：
+
+```
+cd ..
+hugo new post/博客名称2.md      #编辑博客2内容
+hugo
+cd public
+ga .
+gc
+gp
+```
+
+### 五、博客备份
 
 1. 在github上新建一个仓库cu2xin.github.io-creator。
 2. 运行如下代码，查看是否有异常文件。
