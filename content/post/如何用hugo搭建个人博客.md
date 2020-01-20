@@ -95,7 +95,7 @@ hugo server     #预览非草稿
 hugo -D
 ```
 
-### 博客上传在GitHub
+### 三、博客上传到GitHub
 
 1. 上传public
 
@@ -113,9 +113,40 @@ git remote add origin git@github.com:cu2xin/cu2xin.github.io.git
 git push -u origin master
 ```
 
-2.查看博客
+2. 查看博客
 
 * 在cu2xin.github.io处点击Settings；
 * 在弹出网页中的GitHub pages处找到链接点击查看博客。
+
+### 四、博客备份
+
+1. 在github上新建一个仓库cu2xin.github.io-creator。
+2. 运行如下代码，查看是否有异常文件。
+
+```
+git add .
+git status
+```
+3. 查询异常文件中是否有.git文件,可将.git文件删除。
+
+```
+ls -a themes/jane/
+rm -rf themes/jane/.git
+```
+
+4. 运行如下命令完成备份：
+
+```
+git commit -v
+git remote add origin git@github.com:cu2xin/cu2xin.github.io-creator.git
+git push -u origin master
+```
+5. 注意：如果不小心上传了https，则运行如下命令改为ssh。
+
+```
+git remote set-url origin git@github.com:cu2xin/cu2xin.github.io-creator.git
+git push -u origin master
+```
+
 
 > 观书有会意处，题其衣裳，以记其事。
