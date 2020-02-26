@@ -24,8 +24,8 @@ HTML 的 `a`标签可以创建通向其他网页、文件、电子邮件地址�
 
 ```
 <a href="https://google.com">Google</a>
- <a href="http://google.com">Google</a>
- <a href="//google.com">Google</a>
+<a href="http://google.com">Google</a>
+<a href="//google.com">Google</a>
 ```
 
 上面三条代码都定义了一个超链接，浏览器将显示三个“Google”，文字下面默认会有下划线，表示这是一个链接。用户点击任一“Google”后，浏览器都将跳转到 Google 首页。推荐使用`//google.com`，因为`//`最高级，它会自动选择适用 https 还是 http。
@@ -46,14 +46,14 @@ HTML 的 `a`标签可以创建通向其他网页、文件、电子邮件地址�
 
 ```
 <a href="/a/b/c.html">c.html</a>
- <a href="a/b/c.html">c.html</a>
+<a href="a/b/c.html">c.html</a>
 ```
 
 ② 链接到当前目录中的 index.html 的两种方式
 
 ```
 <a href="index.html">index.html</a>
- <a href="./index.html">index.html</a>
+<a href="./index.html">index.html</a>
 ```
 
 - 伪协议
@@ -140,7 +140,7 @@ HTML 的 `a`标签可以创建通向其他网页、文件、电子邮件地址�
 
 ```
 <a href="//google.com" target="test">Google</a>
- <a href="//baidu.com" target="test">baidu</a>
+<a href="//baidu.com" target="test">baidu</a>
 ```
 
 ### 二、img 标签的用法
@@ -199,10 +199,10 @@ alt 属性用来设定图片的文字说明。图片不显示时（比如下载�
 
 ```
 <table>
-   <thead>... ...</thead>
-   <tbody>... ...</tbody>
-   <tfoot>... ...</tfoot>
- </table>
+  <thead>... ...</thead>
+  <tbody>... ...</tbody>
+  <tfoot>... ...</tfoot>
+</table>
 ```
 
 #### 3. tr
@@ -211,9 +211,9 @@ alt 属性用来设定图片的文字说明。图片不显示时（比如下载�
 
 ```
 <table>
-   <tr>...</tr>
-   <tr>...</tr>
- </table>
+  <tr>...</tr>
+  <tr>...</tr>
+</table>
 ```
 
 上面代码表示表格共有 2 行。
@@ -224,18 +224,18 @@ alt 属性用来设定图片的文字说明。图片不显示时（比如下载�
 
 ```
 <table>
-       <thead>
-         <tr><th></th><th>张小红</th><th>小明</th><th>小颖</th></tr>
-       </thead>
-       <tbody>
-         <tr><th>数学</th><td>61</td><td>91</td><td>85</td></tr>
-         <tr><th>语文</th><td>79</td><td>82</td><td>92</td></tr>
-         <tr><th>英语</th><td>100</td><td>97</td><td>87</td></tr>
-       </tbody>
-       <tfoot>
-         <tr><th>总分</th><td>240</td><td>270</td><td>264</td></tr>
-       </tfoot>
-     </table>
+  <thead>
+    <tr><th></th><th>张小红</th><th>小明</th><th>小颖</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>数学</th><td>61</td><td>91</td><td>85</td></tr>
+    <tr><th>语文</th><td>79</td><td>82</td><td>92</td></tr>
+    <tr><th>英语</th><td>100</td><td>97</td><td>87</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><th>总分</th><td>240</td><td>270</td><td>264</td></tr>
+  </tfoot>
+</table>
 ```
 
 上面代码中，表格为一个成绩单，第一行是标题行，所以使用`th`；第二行和第五行中的分数是数据，所以使用`td`。
@@ -248,17 +248,17 @@ alt 属性用来设定图片的文字说明。图片不显示时（比如下载�
 
 ```
 table {
- table-layout: auto;
- }
+table-layout: auto;
+}
 ```
 
 `table-layout`取值为`fixed`时，表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。在当前列中，该单元格所在行之后的行并不会影响整个列宽。通常可结合`width`属性来限制表格的宽。
 
 ```
 table {
-  table-layout: fixed;
-  width: 120px;
- }
+table-layout: fixed;
+width: 120px;
+}
 ```
 
 - `border-collapse`： 是 CSS 属性，用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
@@ -267,24 +267,24 @@ table {
 
 ```
 table {
- border-collapse: collapse;
- }
+border-collapse: collapse;
+}
 ```
 
 `border-collapse`取值为`separate`时，每个单元格拥有独立的边框，它是默认值。
 
 ```
 table {
- border-collapse: separate;
- }
+border-collapse: separate;
+}
 ```
 
 - `border-spacing`:指定相邻单元格边框之间的距离，该属性只适用于`border-collapse`值是`separate`的时候。
 
 ```
 table {
- border-spacing: 2px;
- }
+border-spacing: 2px;
+}
 ```
 
 上面代码表示单元格边框之间的距离为 2 像素。
@@ -307,9 +307,8 @@ table {
 
 ```
 <form action="https://example.com/api" method="post" autocomplete="on" target="_blank">
-   <input type="text" name="user">
-   <input type="submit">
- </form>
+<input type="text" name="user">
+<input type="submit"></form>
 ```
 
 上面代码就是一个表单，包含一个文本输入框和一个提交按钮，文本输入框的`name`属性是`user`。用户在文本输入框里面，输入用户名，比如 Lucy，然后点击提交按钮，浏览器就会向服务器https://example.com/api发送一个 POST 请求，发送 user=Lucy 这样一段数据，并在一个空白窗口展示服务器返回的数据。
@@ -342,23 +341,23 @@ table {
 
 ```
 <input name="gender" type="radio" />男
- <input name="gender" type="radio" />女
+<input name="gender" type="radio" />女
 ```
 
 - `type="checkbox"`：复选框，允许选择或取消选择该选项。
 
 ```
 <input name="hobby" type="checkbox" />网球
- <input name="hobby" type="checkbox" />篮球
- <input name="hobby" type="checkbox" />乒乓球
- <input name="hobby" type="checkbox" />游泳
+<input name="hobby" type="checkbox" />篮球
+<input name="hobby" type="checkbox" />乒乓球
+<input name="hobby" type="checkbox" />游泳
 ```
 
 - `type="file"`：一个文件选择框，常用于文件上传功能。默认只能选择一个文件，添加`multiple`属性后允许选择多个文件。
 
 ```
 <input name="file" type="file" />
- <input name="files" type="file" multiple />
+<input name="files" type="file" multiple />
 ```
 
 - `type="submit"`：表单的提交按钮。用户点击这个按钮，就会把表单提交给服务器。如果不指定`value`属性，浏览器会在提交按钮上显示默认的文字，通常是“提交”。
